@@ -9,3 +9,13 @@ sources:
       - name: store_sales
         description: 'Details about sales in stores.'
         # - columns : ...
+
+models:
+  - name: snowflake_sample_data__store_sales
+    description: "Sales from stores"
+    # columns:
+      # - name: id
+      #   description: "The primary key for this table"
+      #   tests:
+      #     - unique
+      #     - not_null
