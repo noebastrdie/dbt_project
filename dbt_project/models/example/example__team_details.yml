@@ -11,7 +11,7 @@ models :
       - name : City
         description : "The home city of the team"
         test :
-        - is_la_team
+          - is_la_team
 
       - name : State
         description : "The home state of the team"
