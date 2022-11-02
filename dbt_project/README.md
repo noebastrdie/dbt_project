@@ -642,4 +642,3 @@ metrics:
     meta:
       metric_level: 'Company'
       owner(s): 'Jane Doe'
-```
