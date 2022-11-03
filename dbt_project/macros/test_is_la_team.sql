@@ -23,4 +23,4 @@ validation_errors as (
 select *
 from validation_errors
 
-{% endtest %}
+{% endmacro %}
