@@ -20,7 +20,14 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+#executed at the start(ie end) of a dbt_run, dbt_seed or dbt_snapshot
+on-run-start: "{{insert_audits('run_start')}}"
+on-run-end: "{{insert_audits('run_end')}}"
+
 models:
+  #executed before(ie after) a model,seed or snapdhot is built
+  pre-hook: "{{insert_audits('model_start')}}"
+  post-hook: "{{insert_audits('model_end')}}"
   dbt_project:
     # Config indicated by + and applies to all files under models/example/
     example:

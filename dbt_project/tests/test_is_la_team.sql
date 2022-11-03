@@ -1,4 +1,4 @@
-{% macro is_la_team(model, column_name) %}
+{% test is_la_team(model, column_name) %}
 
 with validation as (
 
@@ -23,4 +23,4 @@ validation_errors as (
 select *
 from validation_errors
 
-{% endmacro %}
+{% endtest %}
