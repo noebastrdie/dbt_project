@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: PC_DBT_DB
+    database: PC_DBT_DB
+    schema: PUBLIC
+
+    freshness: # default freshness
+        warn_after: {count: 300, period: minute}
+        error_after: {count: 500, period: minute}
+        #filter is added as a where clause 
+        filter: datediff('minute', created_at, current_timestamp) < 50
+
+    loaded_at_field: "convert_timezone('UTC', 'America/Los_Angeles', created_at)"
+      
+    tables:
+      - name: my_fav_source
+        description: 'random names and id'
+        columns : 
+          - name : id
+          - name : name
+          - name : created_at
