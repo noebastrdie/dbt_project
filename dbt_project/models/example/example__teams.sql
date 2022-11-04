@@ -27,6 +27,8 @@ with teams as (
     select
         'Bulls' as team
 
+    select  
+        'Boston' as team
 )
 
 select * from teams
