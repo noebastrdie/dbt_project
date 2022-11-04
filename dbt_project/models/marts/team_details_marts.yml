@@ -1,0 +1,14 @@
+version: 2
+
+models :
+  - name : example__team_details
+    description : A list of a few NBA teams.
+    columns :
+    - name : Team
+      description : '{{ doc("team_details_name") }}'
+    - name : City
+      description : '{{ doc("team_details_city") }}'
+      test :
+        - is_la_team
+    - name : State
+      description : '{{ doc("team_details_state") }}'
