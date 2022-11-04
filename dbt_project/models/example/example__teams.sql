@@ -31,4 +31,4 @@ with teams as (
         'Boston' as team
 )
 
-select * from teams
+select *, '{{ invocation_id }}' as invocation_id from teams
