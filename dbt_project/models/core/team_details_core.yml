@@ -1,7 +1,7 @@
 version: 2
 
 models :
-  - name : example__team_details
+  - name : marts__team_details
     description : A list of a few NBA teams.
     columns :
     - name : Team
